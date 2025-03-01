@@ -37,7 +37,7 @@ def log_attendance(name, img):
     # Save the capture
     cv2.imwrite(image_path, img)
 
-    # Append the data manually
+    # Append the data 
     with open(csv_file, "a", newline="") as file:
         writer = csv.writer(file)
         writer.writerow([name, date_today, time_now, image_path])
